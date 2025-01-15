@@ -81,6 +81,7 @@ def process_udp_request(udp_socket, addr, file_size):
         # Calculate total number of packets to be sent
         total_packets = (file_size + MAX_BUFFER_SIZE - 1) // MAX_BUFFER_SIZE
         payload_size = 1022  # Payload size per packet
+        #this the max number i can use to avoid the error winerror 10040
 
         for packet_num in range(total_packets):
             # Pack the header with magic cookie, message type, total packets, and packet number

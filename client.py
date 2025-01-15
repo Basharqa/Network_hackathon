@@ -21,7 +21,6 @@ CYAN = "\033[36m"
 BLUE = "\033[34m"
 WHITE = "\033[97m"
 
-# Function to listen for broadcast messages
 def is_valid_broadcast(packet):
     try:
         if UDP in packet and Raw in packet:
@@ -154,7 +153,6 @@ def handle_udp_connection(server_ip, udp_port, connection_id, file_size):
             udp_socket.close()
 
 
-# Main client function
 def main():
     file_size = int(input("Enter the file size (in bytes): "))
     num_tcp_connections = int(input("Enter the number of TCP connections: "))
